@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap');
+
+* {
+    font-family: 'Barlow', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #FFFEEE;
+}
+
+section {
+    width: 600px;
+}
+
+h1 {
+    font-size: 30px;
+    text-align: left;
+}
+
+h2 {
+    font-size: 50px;
+    text-align: center;
+}
+
+p {
+    font-size: 15px;
+}
+
+.title-block {
+    width: 600px;
+    height: 210px;
+    background-color: #789175;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: #FFFEEE;
+}
+
+.answer-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 16px 0 23px 0;
+}
+
+.answer-block {
+    width: 286px;
+    height: 286px;
+    border-radius: 5px;
+    box-shadow: rgba(0,0,0, 0.07) 0 0 0 1px;
+    text-align: center;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.answer-block img {
+    width: 100%;
+}
+
+.answer-block p {
+    font-size: 11px;
+    font-style: italic;
+}
+
+.answer-block a {
+    color: rgb(137,137,137);
+}
+
+.result-block {
+    width: 600px;
+    background-color: #EE8733;
+    border-radius: 5px;
+    border: solid #EE8733 20px;
+}
+
+.result-block img {
+    width: 100%;
+}
