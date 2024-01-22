@@ -8,7 +8,8 @@ const questions = [
        answers: [
            {
                text: "Male",
-               image: "https://images.unsplash.com/photo-1534430480872-3498386e7856?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjczMTc0fQ&fit=crop&h=230&w=320&crop=edges",
+            //    image: "https://images.unsplash.com/photo-1534430480872-3498386e7856?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjczMTc0fQ&fit=crop&h=230&w=320&crop=edges",
+               image: "img/male.png",
                alt: "Photo of the Empire State building during daytime",
                credit: "Oliver Niblett"
            },
@@ -144,7 +145,7 @@ const populateQuestions = () => {
             const answerInfo = document.createElement('p')
             const imageLink = document.createElement('a')
             imageLink.setAttribute('href', answer.image)
-            imageLink.textContent = answer.credit
+            // imageLink.textContent = answer.credit
             const sourceLink = document.createElement('a')
             sourceLink.textContent = 'Unsplash'
             sourceLink.setAttribute('src', 'https://www.unsplash.com')
@@ -178,8 +179,33 @@ const handleClick = (questionId, chosenAnswer) => {
 
     if (!unansweredQuestions.length) {
         location.href = '#answer'
-        showAnswer()
+        showLoadingAnimation() // show loader animation
+        document.body.style.overflow = 'hidden'; // disable scrolling
+        answerDisplay.style.visibility = 'hidden'; // make answer box hidden
+        showAnswer(); // populate answer box
+
+        function hideLoadingAnimation() {
+            document.getElementById('loader1').style.display = 'none'; // hide loader animation
+            document.body.style.overflow = ''; // re-enable scrolling
+            answerDisplay.style.visibility = ''; // show answer box
+            answerDisplay.scrollIntoView({behavior: 'smooth', block: 'end', inline: 'nearest'}); // smoothly scroll to answer
+        }
+        setTimeout(hideLoadingAnimation, 3000);
     }
+}
+
+const showLoadingAnimation = () => {
+    const loader = document.createElement('div')
+    loader.classList.add('loader')
+    loader.id = 'loader1';
+    const loader_img = document.createElement('img')
+    loader_img.setAttribute('src', 'img/loading.gif')
+    const loader_text = document.createElement('h1');
+    loader_text.textContent = "Gathering results...";
+
+    loader.append(loader_img);
+    loader.append(loader_text);
+    document.body.append(loader);
 }
 
 const showAnswer = () => {
