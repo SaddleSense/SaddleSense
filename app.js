@@ -92,14 +92,14 @@ const questions = [
 const answers = [
     {
         combination: ["New York", "Pizza", "Traditional"],
-        text: "Blue Cheese",
-        image: "https://images.unsplash.com/photo-1452195100486-9cc805987862?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjczMTc0fQ&w=400&h=400&fit=fillmax",
+        text: "Fizik Antares Versus Evo R3 Adaptive",
+        image: "img/fizik_antares_versus_evo_r3_adaptive.webp",
         alt: "Blue cheese"
     },
     {
         combination: ["Austin", "Pasta", "Modern"],
-        text: "Cheddar",
-        image: "https://images.unsplash.com/photo-1618164435735-413d3b066c9a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+        text: "Specialized Romin Evo Pro",
+        image: "img/specialized_romin_evo_pro.webp",
         alt: "Cheddar cheese"
     },
     {
