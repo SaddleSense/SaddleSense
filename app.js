@@ -1,98 +1,162 @@
+// Create and append logo dynamically
+const logoImg = document.createElement('img');
+logoImg.src = 'img/logo.png'; // Assuming your logo is in the 'img' folder
+logoImg.alt = 'SaddleSense Logo';
+logoImg.classList.add('logo');
+document.body.appendChild(logoImg); // Append logo to the body of the document
+
+
+
 const questionDisplay = document.querySelector('#questions')
 const answerDisplay = document.querySelector('#answer')
 
 const questions = [
     {
-       id: 0,
-       text: "What is your sex?",
-       answers: [
-           {
-               text: "Male",
-               image: "img/male.png",
-               alt: "Photo of the Empire State building during daytime",
-               credit: "Oliver Niblett"
-           },
-           {
-               text: "Female",
-               image: "img/female.png",
-               alt:"Time-lapse photography car lights on bridge",
-               credit: "Carlos Alfonso"
-           }
-        ]
-    },
-    {
-        id: 1,
-        text: "Preferred cycling style?",
+        id: 0,
+        text: "What is your primary form of cycling?",
         answers: [
             {
                 text: "Gravel",
                 image: "img/gravel_cycling.jpg",
-                alt:"Pepperoni Pizza",
-                credit: "Alan Hardman"
+                alt:"Gravel",
+                credit: "sk"
             },
             {
                 text: "Mountain",
                 image: "img/mountain_cycling.jpg",
-                alt:"ham sandwich on white surface",
-                credit: "Eaters Collective"
+                alt:"Mountain",
+                credit: "sk"
             },
             {
                 text: "Road",
                 image: "img/road_cycling.jpg",
-                alt:"Pasta in tomato sauce",
-                credit: "Mgg Vitchakorn"
+                alt:"Road",
+                credit: "sk"
+            },            
+        ]
+    },
+    {
+        id: 1,
+        text: "Which cycling profile describes you best?",
+        answers: [
+            {
+                text: "Recreational or Commuter",
+                image: "img/recreational_cycling.jpg",
             },
             {
-                text: "Commuter",
-                image: "img/commuter_cycling.jpg",
-                alt:"hamburger",
-                credit: "sk"
+                text: "Bike touring",
+                image: "img/biketouring.jpg",
+            },
+            {
+                text: "Performance",
+                image: "img/performance_road.jpg",
+            },
+            {
+                text: "Mountain cycling",
+                image: "img/mountain_cycling_sideview.jpg",
             }
-            
         ]
     },
     {
         id: 2,
-        text: "Preferred cycling position?",
+        text: "What is your primary area of discomfort?",
         answers: [
             {
-                text: "Leisure",
-                image: "img/leisure.png",
-                alt:"focus photography of building windows",
-                credit: "Burgess Milner"
+                text: "Sit bones",
+                image: "img/sitbones.jpeg",
             },
             {
-                text: "Fitness",
-                image: "img/fitness.png",
-                alt:"low angle view of building",
-                credit: "Brandon Giggs"
+                text: "Genital area",
+                image: "img/genitalpain.jpeg",
             },
             {
-                text: "Performance",
-                image: "img/performance.png",
-                alt:"trees beside white house",
-                credit: "Phil Hearing"
+                text: "Upper thighs",
+                image: "img/thighs.png",
             },
             {
-                text: "Aggressive",
-                image: "img/aggressive.png",
-                alt:"trees beside white house",
-                credit: "Phil Hearing"
+                text: "Other",
+                image: "img/other.png",
             },
             {
-                text: "Aerodynamic",
-                image: "img/aerodynamic.png",
-                alt:"brown wooden cabin infront of forest",
-                credit: "eulauretta"
+                text: "None",
+                image: "img/none.png",
             }
-        ]
-    }
+         ]
+     },
+     {
+        id: 3,
+        text: "What accessories do you typically use while cycling?",
+        answers: [
+            {
+                text: "Chamois shorts",
+                image: "img/shorts.png",
+            },
+            {
+                text: "Chamois creme",
+                image: "img/creme.png",
+            },
+            {
+                text: "Seat cover",
+                image: "img/seatcover.png",
+            },
+            {
+                text: "Other",
+                image: "img/other.png",
+            },
+            {
+                text: "None",
+                image: "img/none.png",
+            }
+         ]
+     },
+    {
+        id: 4,
+        text: "Sex of cyclist:",
+        answers: [
+            {
+                text: "Male",
+                image: "img/male.png",
+                alt: "male",
+            },
+            {
+                text: "Female",
+                image: "img/female.png",
+                alt:"female",
+            }
+         ]
+     },
+     {
+        id: 5,
+        text: "Age of cyclist:",
+        answers: [
+            {
+                text: "<18 years",
+                image: "img/under18.png",
+            },
+            {
+                text: "18-29 years",
+                image: "img/18to29.png",
+            },
+            {
+                text: "30-49 years",
+                image: "img/30to49.png",
+            },
+            {
+                text: "50-69 years",
+                image: "img/50to69.png",
+            },
+            {
+                text: "70+ years",
+                image: "img/70plus.png",
+            }
+         ]
+     },
 ]
 
 const answers = [
     {
         combination: ["New York", "Pizza", "Traditional"],
-        text: "Fizik Antares Versus Evo R3 Adaptive",
+        text: "Recommended Saddle: Fizik Antares Versus Evo R3 Adaptive",
         image: "img/fizik_antares_versus_evo_r3_adaptive.webp",
         alt: "Blue cheese"
     },
@@ -128,6 +192,8 @@ const populateQuestions = () => {
         const titleHeading = document.createElement('h2')
         titleHeading.textContent = question.text
         titleBlock.append(titleHeading)
+
+        
         questionDisplay.append(titleBlock)
 
         const answersBlock = document.createElement('div')
