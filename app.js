@@ -156,8 +156,8 @@ const questions = [
 const answers = [
     {
         combination: ["New York", "Pizza", "Traditional"],
-        text: "Recommended Saddle: Fizik Antares Versus Evo R3 Adaptive",
-        image: "img/fizik_antares_versus_evo_r3_adaptive.webp",
+        text: "Recommended Saddle: 'Specialized' Power Comp",
+        image: "img/results.png",
         alt: "Blue cheese"
     },
     {
